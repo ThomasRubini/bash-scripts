@@ -1,5 +1,6 @@
 #!/bin/bash
 # Bash script to sort the endpoint (and method) paths in an OpenAPI spec file
+# Dependencies: yq
 # Syntax: ./sort_openapi.sh <input_file.yaml> <output_file.yaml>
 
 # Exit on error
