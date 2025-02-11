@@ -59,6 +59,12 @@ if [ ! -f "$input_file" ]; then
     exit 1
 fi
 
+# Check if input file is valid
+if ! yq $input_file > /dev/null; then
+    echo "Invalid input file"
+    exit 1
+fi
+
 # Check if output file already exists
 if [ -f "$output_file" ]; then
     echo -n "Output file already exists. Do you want to override ? [yN] "
